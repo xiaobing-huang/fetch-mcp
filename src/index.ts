@@ -47,6 +47,21 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
               type: "number",
               description: "Start content from this character index (default: 0)",
             },
+            proxy: {
+              type: "object",
+              description: "Optional proxy configuration",
+              properties: {
+                url: {
+                  type: "string",
+                  description: "Proxy URL (e.g., http://proxy:8080 or http://user:pass@proxy:8080)"
+                },
+                bypass: {
+                  type: "array",
+                  items: { type: "string" },
+                  description: "List of domains/IPs to bypass proxy for"
+                }
+              }
+            },
           },
           required: ["url"],
         },
@@ -72,6 +87,21 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             start_index: {
               type: "number",
               description: "Start content from this character index (default: 0)",
+            },
+            proxy: {
+              type: "object",
+              description: "Optional proxy configuration",
+              properties: {
+                url: {
+                  type: "string",
+                  description: "Proxy URL (e.g., http://proxy:8080 or http://user:pass@proxy:8080)"
+                },
+                bypass: {
+                  type: "array",
+                  items: { type: "string" },
+                  description: "List of domains/IPs to bypass proxy for"
+                }
+              }
             },
           },
           required: ["url"],
@@ -100,6 +130,21 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
               type: "number",
               description: "Start content from this character index (default: 0)",
             },
+            proxy: {
+              type: "object",
+              description: "Optional proxy configuration",
+              properties: {
+                url: {
+                  type: "string",
+                  description: "Proxy URL (e.g., http://proxy:8080 or http://user:pass@proxy:8080)"
+                },
+                bypass: {
+                  type: "array",
+                  items: { type: "string" },
+                  description: "List of domains/IPs to bypass proxy for"
+                }
+              }
+            },
           },
           required: ["url"],
         },
@@ -125,6 +170,21 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             start_index: {
               type: "number",
               description: "Start content from this character index (default: 0)",
+            },
+            proxy: {
+              type: "object",
+              description: "Optional proxy configuration",
+              properties: {
+                url: {
+                  type: "string",
+                  description: "Proxy URL (e.g., http://proxy:8080 or http://user:pass@proxy:8080)"
+                },
+                bypass: {
+                  type: "array",
+                  items: { type: "string" },
+                  description: "List of domains/IPs to bypass proxy for"
+                }
+              }
             },
           },
           required: ["url"],
